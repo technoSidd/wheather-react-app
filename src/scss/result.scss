@@ -1,0 +1,121 @@
+.display-2 {
+  font-size: 3rem !important;
+  line-height: 3.125rem;
+  letter-spacing: normal !important;
+}
+.card__title {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: 0.0125em;
+  line-height: 2rem;
+  word-break: break-all;
+  padding: 16px;
+  color: rgba(0, 0, 0, 0.87);
+  overflow-wrap: break-word;
+  position: relative;
+  white-space: normal;
+}
+.elevation-4 {
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12) !important;
+}
+.card__subtitle,
+.card__text {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.375rem;
+  letter-spacing: 0.0071428571em;
+  padding: 16px;
+  margin-top: -16px;
+  color: rgba(0, 0, 0, 0.6);
+}
+.card__text {
+  width: 100%;
+}
+.list-item {
+  align-items: center;
+  display: flex;
+  flex: 1 1 100%;
+  letter-spacing: normal;
+  min-height: 48px;
+  outline: none;
+  padding: 0 16px;
+  position: relative;
+  text-decoration: none;
+}
+.list-item__content {
+  align-items: center;
+  align-self: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 1;
+  overflow: hidden;
+  padding: 12px 0px;
+}
+.list-item__title {
+  align-self: center;
+  font-size: 1rem;
+  flex: 1 1 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.list-item__content > :not(:last-child) {
+  margin-bottom: 2px;
+}
+.list-item .v-list-item__title {
+  line-height: 1.2;
+}
+.list-item__subtitle {
+  color: rgba(0, 0, 0, 0.6);
+  line-height: 1.2;
+  font-size: 0.875rem;
+  flex: 1 1 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.list-item:after {
+  content: "";
+  min-height: inherit;
+  font-size: 0;
+}
+.image__image {
+  background-image: url("https://konte.pages.labranet.jamk.fi/vue-weather-app/img/52.e52072c4.svg");
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: rgba(0, 0, 0, 0.87);
+}
+.v-image {
+  min-width: 50px;
+  width: 50px;
+}
+.responsive__sizer {
+  padding-bottom: 100%;
+}
+.responsive__content {
+  width: 37px;
+  margin-left: -100%;
+  flex: 1 0 0px;
+  max-width: 100%;
+}
+.mx-5 {
+  margin-left: 3rem !important;
+  margin-top: 30px;
+}
+.fav-h-icon {
+  color: black !important;
+  background-color: #efefef !important;
+}
+.view-btn {
+  box-shadow: 0 2px 4px -1px "#efefef" !important;
+}
