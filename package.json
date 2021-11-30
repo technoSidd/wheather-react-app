@@ -13,6 +13,7 @@
     "@types/query-string": "^6.3.0",
     "bootstrap": "^4.1.1",
     "fmi-api": "git+https://gitlab.labranet.jamk.fi/YTSP0200/fmi-api.git",
+    "moment": "^2.29.1",
     "node-sass": "^6.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",

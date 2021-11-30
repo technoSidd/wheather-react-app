@@ -7,6 +7,7 @@ import Button from "@mui/material/Button";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 // import Moment from "react-moment";
+import Moment from "moment";
 
 const Result = () => {
   const [imageUrl] = useState("https://konte.pages.labranet.jamk.fi/vue-weather-app/img/weatherapplogo.36014a54.png");
@@ -48,7 +49,7 @@ const Result = () => {
   }
   function formatDate(dateStr) {
     // return format(new Date(dateStr), "EEEE dd.MM.yyyy HH:mm");
-    return;
+    return Moment(dateStr).format("dddd.MM.yyyy HH:mm");
   }
   function addFavorite(id) {
     const favorites = localStorage.favorites !== undefined ? JSON.parse(localStorage.favorites) : [];
@@ -69,7 +70,7 @@ const Result = () => {
         <React.Fragment key={data}>
           <div className="col-sm-4 col-md-3 col-12" style={{ paddingBottom: 32 }}>
             <div className="card sheet theme--light elevation-4" style={{ backgroundColor: "#fff", borderColor: "#fff" }}>
-              <div className="card__title"> {data} </div>
+              <div className="card__title"> {formatDate(data)} </div>
               <div className="card__subtitle"> Forecast </div>
               <div className="card__text">
                 <div className="row">
@@ -77,36 +78,47 @@ const Result = () => {
                     <div className="list-item list-item--two-line theme--light">
                       <div className="list-item__content">
                         <div className="list-item__title">Temperature</div>
-                        <div className="list-item__subtitle">20 °C</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-lg-6 col-12">
-                    <div className="list-item list-item--two-line theme--light">
-                      <div className="v-list-item__content">
-                        <div className="v-list-item__subtitle">
-                          <div aria-label="52.0" role="img" className="v-image v-responsive theme--light">
-                            <div className="responsive__sizer"></div>
-                            <div className="image__image v-image__image--contain"></div>
-                            <div className="responsive__content"></div>
-                          </div>
-                        </div>
+                        <div className="list-item__subtitle">{observation.t2m} °C</div>
                       </div>
                     </div>
                   </div>
                   <div className="col-lg-6 col-12">
                     <div className="list-item list-item--two-line theme--light">
                       <div className="list-item__content">
-                        <div className="list-item__title">Temperature</div>
-                        <div className="list-item__subtitle">-3.8 °C</div>
+                        <div className="list-item__title">Humidity</div>
+                        <div className="list-item__subtitle">{observation.rh} %</div>
                       </div>
                     </div>
                   </div>
                   <div className="col-lg-6 col-12">
                     <div className="list-item list-item--two-line theme--light">
                       <div className="list-item__content">
-                        <div className="list-item__title">Temperature</div>
-                        <div className="list-item__subtitle">-3.8 °C</div>
+                        <div className="list-item__title">Pressure</div>
+                        <div className="list-item__subtitle">{observation.p_sea} hPa</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-lg-6 col-12">
+                    <div className="list-item list-item--two-line theme--light">
+                      <div className="list-item__content">
+                        <div className="list-item__title">Dewpoint</div>
+                        <div className="list-item__subtitle">{observation.wd_10min} °C</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-lg-6 col-12">
+                    <div className="list-item list-item--two-line theme--light">
+                      <div className="list-item__content">
+                        <div className="list-item__title">Wind</div>
+                        <div className="list-item__subtitle">{observation.wd_10min} m/s</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-lg-6 col-12">
+                    <div className="list-item list-item--two-line theme--light">
+                      <div className="list-item__content">
+                        <div className="list-item__title">Wind gusts</div>
+                        <div className="list-item__subtitle">{observation.wg_10min} m/s</div>
                       </div>
                     </div>
                   </div>
@@ -125,7 +137,7 @@ const Result = () => {
   return (
     <div className="main">
       <div className="main__wrap">
-        <div className="container mt-5">
+        <div className="container mt-5" style={{ maxWidth: 1372 }}>
           <div className="pb-5 card sheet theme-light elevation-2" style={{ backgroundColor: "#cecece", borderColor: "#cecece" }}>
             <div className="row text-center">
               <div className="col col-12">
