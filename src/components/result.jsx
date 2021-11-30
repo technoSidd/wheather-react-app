@@ -78,7 +78,7 @@ const Result = () => {
                     <div className="list-item list-item--two-line theme--light">
                       <div className="list-item__content">
                         <div className="list-item__title">Temperature</div>
-                        <div className="list-item__subtitle">{observation.t2m} °C</div>
+                        <div className="list-item__subtitle">{forecast[data].Temperature} °C</div>
                       </div>
                     </div>
                   </div>
@@ -86,7 +86,7 @@ const Result = () => {
                     <div className="list-item list-item--two-line theme--light">
                       <div className="list-item__content">
                         <div className="list-item__title">Humidity</div>
-                        <div className="list-item__subtitle">{observation.rh} %</div>
+                        <div className="list-item__subtitle">{forecast[data].Humidity} %</div>
                       </div>
                     </div>
                   </div>
@@ -94,7 +94,7 @@ const Result = () => {
                     <div className="list-item list-item--two-line theme--light">
                       <div className="list-item__content">
                         <div className="list-item__title">Pressure</div>
-                        <div className="list-item__subtitle">{observation.p_sea} hPa</div>
+                        <div className="list-item__subtitle">{forecast[data].Pressure} hPa</div>
                       </div>
                     </div>
                   </div>
@@ -102,7 +102,7 @@ const Result = () => {
                     <div className="list-item list-item--two-line theme--light">
                       <div className="list-item__content">
                         <div className="list-item__title">Dewpoint</div>
-                        <div className="list-item__subtitle">{observation.wd_10min} °C</div>
+                        <div className="list-item__subtitle">{forecast[data].DewPoint} °C</div>
                       </div>
                     </div>
                   </div>
@@ -110,7 +110,7 @@ const Result = () => {
                     <div className="list-item list-item--two-line theme--light">
                       <div className="list-item__content">
                         <div className="list-item__title">Wind</div>
-                        <div className="list-item__subtitle">{observation.wd_10min} m/s</div>
+                        <div className="list-item__subtitle">{forecast[data].WindSpeedMS} m/s</div>
                       </div>
                     </div>
                   </div>
@@ -118,7 +118,7 @@ const Result = () => {
                     <div className="list-item list-item--two-line theme--light">
                       <div className="list-item__content">
                         <div className="list-item__title">Wind gusts</div>
-                        <div className="list-item__subtitle">{observation.wg_10min} m/s</div>
+                        <div className="list-item__subtitle">{forecast[data].WindGust} m/s</div>
                       </div>
                     </div>
                   </div>

@@ -108,7 +108,7 @@ const Favourite = () => {
   return (
     <div className="main">
       <div className="main__wrap">
-        <div className="container mt-5">
+        <div className="container mt-5" style={{ maxWidth: 1372 }}>
           <div className="pb-5 card sheet theme-light elevation-2" style={{ backgroundColor: "#cecece", borderColor: "#cecece" }}>
             <div className="row text-center">
               <div className="col col-12">
