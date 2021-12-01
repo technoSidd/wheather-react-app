@@ -24,7 +24,6 @@ const Result = () => {
     setObservation(observation);
     forecast = await TimestampedForecast(await fmi.getForecast(id));
     setForcast(forecast);
-    console.log(forecast);
     const favorites = localStorage.favorites !== undefined ? JSON.parse(localStorage.favorites) : [];
     if (favorites.length > 0 && favorites.includes(id)) {
       setFavourite(true);
@@ -158,7 +157,7 @@ const Result = () => {
             <div className="row">
               <div className="px-12 col col-12"></div>
             </div>
-            <div className="row mx-5">
+            <div className="row mx-3" style={{ marginTop: 28 }}>
               {observation ? (
                 <div className="col-sm-4 col-md-3 col-12" style={{ paddingBottom: 32 }}>
                   <div className="card sheet theme--light elevation-4" style={{ backgroundColor: "#aeddff", borderColor: "#aeddff" }}>

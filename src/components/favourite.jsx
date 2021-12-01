@@ -11,26 +11,11 @@ const Favourite = () => {
 
   useEffect(async () => {
     setCount(100);
-
+    // Update the document title using the browser API
     const favorites = localStorage.getItem("favorites") ? JSON.parse(localStorage.getItem("favorites")) : [];
     setFavourites(favorites);
-    // Update the document title using the browser API
-    //   observation = await fmi.getLatestObservation(id);
-    //   setObservation(observation);
-    //   forecast = await TimestampedForecast(await fmi.getForecast(id));
-    //   setForcast(forecast);
-    //   console.log(forecast);
-    //   const favorites = localStorage.favorites !== undefined ? JSON.parse(localStorage.favorites) : [];
-    //   if (favorites.length > 0 && favorites.includes(id)) {
-    //     setFavourite(true);
-    //   } else {
-    //     setFavourite(false);
-    //   }
   }, count);
-  function formatDate(dateStr) {
-    // return format(new Date(dateStr), "EEEE dd.MM.yyyy HH:mm");
-    return;
-  }
+
   function removeFavorite(fmisid) {
     const favorites = localStorage.getItem("favorites") ? JSON.parse(localStorage.getItem("favorites")) : [];
     if (favorites.includes(fmisid)) {
@@ -39,9 +24,7 @@ const Favourite = () => {
       setFavourites(favorites);
     }
   }
-  //   naviagateToResult = (value) => {
-  //     this.props.navigate("/result/" + value.name.split(",")[0]);
-  //   };
+
   function renderForCasts() {
     if (favorites) {
       return favorites.map((data) => (
@@ -122,7 +105,9 @@ const Favourite = () => {
             <div className="row">
               <div className="px-12 col col-12"></div>
             </div>
-            <div className="row mx-5">{renderForCasts()}</div>
+            <div className="row mx-3" style={{ marginTop: 28 }}>
+              {renderForCasts()}
+            </div>
           </div>
         </div>
       </div>
@@ -131,10 +116,3 @@ const Favourite = () => {
 };
 
 export default Favourite;
-
-// function WithNavigate(props) {
-//   let navigate = useNavigate();
-//   return <Favourite {...props} navigate={navigate} />;
-// }
-
-// export default WithNavigate;

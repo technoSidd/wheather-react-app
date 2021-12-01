@@ -18,22 +18,6 @@ class Home extends React.Component {
   render() {
     return (
       <React.Fragment>
-        {/* <div className="conatiner mt-6">
-          <h2 className="text-center">Search for a municipality</h2>
-          <div className="row text-center">
-            <div className="col-md-10 mx-auto">
-              <Autocomplete
-                disablePortal
-                id="combo-box-demo"
-                options={this.state.municipalities}
-                onChange={this.naviagateToResult}
-                sx={{ width: "100%" }}
-                getOptionLabel={(option) => option.name}
-                renderInput={(params) => <TextField {...params} label="Search for a municipality" />}
-              />
-            </div>
-          </div>
-        </div> */}
         <div className="main">
           <div className="main__wrap">
             <div className="container mt-5" style={{ maxWidth: 1372 }}>
