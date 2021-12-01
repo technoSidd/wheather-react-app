@@ -48,7 +48,6 @@ const Result = () => {
     return out;
   }
   function formatDate(dateStr) {
-    // return format(new Date(dateStr), "EEEE dd.MM.yyyy HH:mm");
     return Moment(dateStr).format("dddd DD.MM.yyyy HH:mm");
   }
   function addFavorite(id) {
@@ -129,7 +128,6 @@ const Result = () => {
         </React.Fragment>
       ));
     } else {
-      console.log("not ok");
       return <div>Please wait..!</div>;
     }
   }
