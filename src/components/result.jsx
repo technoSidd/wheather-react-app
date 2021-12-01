@@ -21,6 +21,7 @@ const Result = () => {
     setCount(100);
     // Update the document title using the browser API
     observation = await fmi.getLatestObservation(id);
+    console.log(observation);
     setObservation(observation);
     forecast = await TimestampedForecast(await fmi.getForecast(id));
     setForcast(forecast);
@@ -161,7 +162,7 @@ const Result = () => {
               {observation ? (
                 <div className="col-sm-4 col-md-3 col-12" style={{ paddingBottom: 32 }}>
                   <div className="card sheet theme--light elevation-4" style={{ backgroundColor: "#aeddff", borderColor: "#aeddff" }}>
-                    <div className="card__title"> Weather right now </div>
+                    <div className="card__title"> {formatDate(observation.time)} </div>
                     <div className="card__subtitle"> Observation </div>
                     <div className="card__text">
                       <div className="row">
