@@ -49,7 +49,7 @@ const Result = () => {
   }
   function formatDate(dateStr) {
     // return format(new Date(dateStr), "EEEE dd.MM.yyyy HH:mm");
-    return Moment(dateStr).format("dddd.MM.yyyy HH:mm");
+    return Moment(dateStr).format("dddd DD.MM.yyyy HH:mm");
   }
   function addFavorite(id) {
     const favorites = localStorage.favorites !== undefined ? JSON.parse(localStorage.favorites) : [];
